@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Farmacia Salud Vital</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f9f8;
+            color: #333;
+        }
+
+        /* ENCABEZADO */
+        header {
+            background-color: #0b8f87;
+            color: white;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #c8fff8;
+        }
+
+        /* INICIO */
+        .inicio {
+            min-height: 450px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: #dff7f3;
+            padding: 40px;
+        }
+
+        .inicio h2 {
+            font-size: 42px;
+            color: #08776f;
+            margin-bottom: 15px;
+        }
+
+        .inicio p {
+            font-size: 19px;
+            margin-bottom: 25px;
+        }
+
+        .boton {
+            display: inline-block;
+            background-color: #0b8f87;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .boton:hover {
+            background-color: #066b65;
+        }
+
+        /* SECCIONES */
+        section {
+            padding: 60px 10%;
+            text-align: center;
+        }
+
+        section h2 {
+            color: #08776f;
+            margin-bottom: 20px;
+            font-size: 30px;
+        }
+
+        section p {
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.7;
+        }
+
+        /* SERVICIOS */
+        .servicios {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .tarjeta {
+            background-color: white;
+            width: 220px;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .tarjeta h3 {
+            color: #0b8f87;
+            margin-bottom: 10px;
+        }
+
+        .tarjeta p {
+            font-size: 15px;
+        }
+
+        /* TIPO EMPRESARIAL */
+        .empresarial {
+            background-color: #e8f7f5;
+        }
+
+        .dato {
+            background-color: white;
+            max-width: 600px;
+            margin: 25px auto;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .dato p {
+            margin: 8px 0;
+        }
+
+        /* CONTACTO */
+        .contacto {
+            background-color: white;
+        }
+
+        .contacto p {
+            margin: 10px auto;
+        }
+
+        /* PIE DE PÁGINA */
+        footer {
+            background-color: #075f59;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 700px) {
+
+            header {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            nav {
+                margin-top: 15px;
+            }
+
+            nav a {
+                margin: 5px;
+                font-size: 14px;
+            }
+
+            .inicio h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <h1>💊 Farmacia Salud Vital</h1>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#empresarial">Tipo empresarial</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+
+    <!-- INICIO -->
+    <section class="inicio" id="inicio">
+        <div>
+            <h2>Farmacia Salud Vital</h2>
+
+            <p>
+                Tu salud y bienestar son nuestra prioridad.
+            </p>
+
+            <a href="#servicios" class="boton">
+                Ver servicios
+            </a>
+        </div>
+    </section>
+
+
+    <!-- NOSOTROS -->
+    <section id="nosotros">
+        <h2>Nosotros</h2>
+
+        <p>
+            Somos una farmacia dedicada a ofrecer medicamentos,
+            productos de cuidado personal y servicios relacionados
+            con la salud de nuestra comunidad.
+        </p>
+
+        <br>
+
+        <p>
+            Nuestro objetivo es brindar una atención amable,
+            responsable y de calidad a todos nuestros clientes.
+        </p>
+    </section>
+
+
+    <!-- SERVICIOS -->
+    <section id="servicios">
+        <h2>Servicios</h2>
+
+        <div class="servicios">
+
+            <div class="tarjeta">
+                <h3>💊 Medicamentos</h3>
+                <p>
+                    Venta de medicamentos y productos farmacéuticos.
+                </p>
+            </div>
+
+            <div class="tarjeta">
+                <h3>🩺 Toma de presión</h3>
+                <p>
+                    Servicio de control básico de presión arterial.
+                </p>
+            </div>
+
+            <div class="tarjeta">
+                <h3>🧴 Cuidado personal</h3>
+                <p>
+                    Productos para higiene y cuidado personal.
+                </p>
+            </div>
+
+            <div class="tarjeta">
+                <h3>📦 Domicilios</h3>
+                <p>
+                    Entrega de productos en la zona.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- TIPO EMPRESARIAL -->
+    <section class="empresarial" id="empresarial">
+
+        <h2>Tipo Empresarial</h2>
+
+        <p>
+            Información general de nuestra empresa.
+        </p>
+
+        <div class="dato">
+
+            <p><strong>Nombre:</strong> Farmacia Salud Vital</p>
+
+            <p><strong>Actividad económica:</strong>
+                Comercialización de productos farmacéuticos
+            </p>
+
+            <p><strong>Sector:</strong> Salud y comercio</p>
+
+            <p><strong>Tipo de empresa:</strong>
+                Pequeña empresa
+            </p>
+
+            <p><strong>Ámbito:</strong>
+                Atención al público
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACTO -->
+    <section class="contacto" id="contacto">
+
+        <h2>Contacto</h2>
+
+        <p>
+            📍 Dirección: Calle Principal #10-20
+        </p>
+
+        <p>
+            📞 Teléfono: 300 123 4567
+        </p>
+
+        <p>
+            📧 Correo: farmaciasaludvital@gmail.com
+        </p>
+
+        <p>
+            🕐 Horario: Lunes a sábado, 8:00 AM - 8:00 PM
+        </p>
+
+    </section>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+
+        <p>
+            © 2026 Farmacia Salud Vital - Todos los derechos reservados
+        </p>
+
+    </footer>
+
+
+    <script>
+
+        // Mensaje sencillo al hacer clic en los botones
+        document.querySelector(".boton").addEventListener("click", function() {
+            console.log("Bienvenido a Farmacia Salud Vital");
+        });
+
+    </script>
+
+</body>
+</html>
