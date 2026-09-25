@@ -185,18 +185,149 @@
             }
         }
     </style>
+
+    <!-- Iconos profesionales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        /* CONTENIDO */
+        .contenido {
+            background: #f4f9f8;
+        }
+
+        .contenido-intro {
+            max-width: 850px;
+            margin: 0 auto 35px;
+        }
+
+        .contenido-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 30px;
+        }
+
+        .contenido-card {
+            background: white;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.09);
+            text-align: left;
+            transition: transform .25s ease, box-shadow .25s ease;
+        }
+
+        .contenido-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 22px rgba(0,0,0,0.13);
+        }
+
+        .contenido-card img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .contenido-card-body {
+            padding: 22px;
+        }
+
+        .contenido-icono {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #dff7f3;
+            color: #08776f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-bottom: 14px;
+        }
+
+        .contenido-card h3 {
+            color: #08776f;
+            margin-bottom: 10px;
+        }
+
+        .contenido-card p {
+            font-size: 15px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .destacado {
+            margin-top: 40px;
+            background: linear-gradient(135deg, #08776f, #0b8f87);
+            color: white;
+            border-radius: 16px;
+            padding: 32px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: center;
+            text-align: left;
+        }
+
+        .destacado h3 {
+            font-size: 25px;
+            margin-bottom: 12px;
+        }
+
+        .destacado p {
+            margin: 0;
+            line-height: 1.7;
+        }
+
+        .destacado-lista {
+            display: grid;
+            gap: 12px;
+        }
+
+        .destacado-item {
+            background: rgba(255,255,255,0.12);
+            padding: 13px 16px;
+            border-radius: 8px;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .destacado-item i {
+            width: 20px;
+            text-align: center;
+        }
+
+        @media (max-width: 900px) {
+            .contenido-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .destacado {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .contenido-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
 </head>
 
 <body>
 
     <!-- ENCABEZADO -->
     <header>
-        <h1>💊 Farmacia Salud Vital</h1>
+        <h1>Farmacia Salud Vital</h1>
 
         <nav>
             <a href="#inicio">Inicio</a>
             <a href="#nosotros">Nosotros</a>
             <a href="#servicios">Servicios</a>
+            <a href="#contenido">Contenido</a>
             <a href="#empresarial">Tipo empresarial</a>
             <a href="#contacto">Contacto</a>
         </nav>
@@ -245,28 +376,28 @@
         <div class="servicios">
 
             <div class="tarjeta">
-                <h3>💊 Medicamentos</h3>
+                <h3>Medicamentos</h3>
                 <p>
                     Venta de medicamentos y productos farmacéuticos.
                 </p>
             </div>
 
             <div class="tarjeta">
-                <h3>🩺 Toma de presión</h3>
+                <h3>Toma de presión</h3>
                 <p>
                     Servicio de control básico de presión arterial.
                 </p>
             </div>
 
             <div class="tarjeta">
-                <h3>🧴 Cuidado personal</h3>
+                <h3>Cuidado personal</h3>
                 <p>
                     Productos para higiene y cuidado personal.
                 </p>
             </div>
 
             <div class="tarjeta">
-                <h3>📦 Domicilios</h3>
+                <h3>Domicilios</h3>
                 <p>
                     Entrega de productos en la zona.
                 </p>
@@ -275,6 +406,145 @@
         </div>
     </section>
 
+
+
+    <!-- CONTENIDO -->
+    <section class="contenido" id="contenido">
+        <h2>Contenido de Salud</h2>
+
+        <div class="contenido-intro">
+            <p>
+                En Farmacia Salud Vital no solo ofrecemos productos farmacéuticos.
+                También compartimos información útil para promover el autocuidado,
+                la prevención y hábitos saludables en nuestra comunidad.
+            </p>
+        </div>
+
+        <div class="contenido-grid">
+
+            <article class="contenido-card">
+                <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=900&q=80"
+                     alt="Medicamentos organizados en una farmacia">
+                <div class="contenido-card-body">
+                    <div class="contenido-icono">
+                        <i class="fa-solid fa-pills"></i>
+                    </div>
+                    <h3>Uso responsable de medicamentos</h3>
+                    <p>
+                        La información adecuada ayuda a utilizar los medicamentos
+                        de manera responsable y a seguir las indicaciones de los
+                        profesionales de la salud.
+                    </p>
+                </div>
+            </article>
+
+            <article class="contenido-card">
+                <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=900&q=80"
+                     alt="Profesional de salud atendiendo a una persona">
+                <div class="contenido-card-body">
+                    <div class="contenido-icono">
+                        <i class="fa-solid fa-user-doctor"></i>
+                    </div>
+                    <h3>Orientación y prevención</h3>
+                    <p>
+                        Conocer nuestros hábitos y prestar atención a señales
+                        importantes permite tomar decisiones oportunas sobre
+                        el cuidado de la salud.
+                    </p>
+                </div>
+            </article>
+
+            <article class="contenido-card">
+                <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=900&q=80"
+                     alt="Alimentos saludables">
+                <div class="contenido-card-body">
+                    <div class="contenido-icono">
+                        <i class="fa-solid fa-apple-whole"></i>
+                    </div>
+                    <h3>Hábitos saludables</h3>
+                    <p>
+                        Una alimentación equilibrada, actividad física, descanso
+                        adecuado y buena hidratación forman parte de un estilo
+                        de vida saludable.
+                    </p>
+                </div>
+            </article>
+
+            <article class="contenido-card">
+                <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=900&q=80"
+                     alt="Control de salud">
+                <div class="contenido-card-body">
+                    <div class="contenido-icono">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <h3>Control de la presión</h3>
+                    <p>
+                        El control periódico de la presión arterial puede ayudar
+                        a identificar valores que requieren seguimiento por parte
+                        de un profesional.
+                    </p>
+                </div>
+            </article>
+
+            <article class="contenido-card">
+                <img src="https://images.unsplash.com/photo-1511174511562-5f7f18b874f8?auto=format&fit=crop&w=900&q=80"
+                     alt="Productos de cuidado personal">
+                <div class="contenido-card-body">
+                    <div class="contenido-icono">
+                        <i class="fa-solid fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>Cuidado personal</h3>
+                    <p>
+                        Encuentra información y productos relacionados con la
+                        higiene, el cuidado de la piel y el bienestar cotidiano.
+                    </p>
+                </div>
+            </article>
+
+            <article class="contenido-card">
+                <img src="https://images.unsplash.com/photo-1580281657527-47f249e8f9c8?auto=format&fit=crop&w=900&q=80"
+                     alt="Atención y orientación en salud">
+                <div class="contenido-card-body">
+                    <div class="contenido-icono">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <h3>Atención cercana</h3>
+                    <p>
+                        Nuestro propósito es ofrecer una atención clara, amable
+                        y responsable, facilitando el acceso a productos y
+                        servicios relacionados con el bienestar.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+
+        <div class="destacado">
+            <div>
+                <h3>Centro de información Salud Vital</h3>
+                <p>
+                    Una sección pensada para que nuestros visitantes encuentren
+                    información práctica antes de visitar la farmacia y conozcan
+                    mejor nuestros servicios.
+                </p>
+            </div>
+
+            <div class="destacado-lista">
+                <div class="destacado-item">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Información sobre servicios disponibles</span>
+                </div>
+                <div class="destacado-item">
+                    <i class="fa-solid fa-shield-heart"></i>
+                    <span>Promoción del autocuidado y la prevención</span>
+                </div>
+                <div class="destacado-item">
+                    <i class="fa-solid fa-clock"></i>
+                    <span>Consulta rápida de horarios y atención</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- TIPO EMPRESARIAL -->
     <section class="empresarial" id="empresarial">
@@ -314,19 +584,19 @@
         <h2>Contacto</h2>
 
         <p>
-            📍 Dirección: Calle Principal #10-20
+            Dirección: Calle Principal #10-20
         </p>
 
         <p>
-            📞 Teléfono: 300 123 4567
+            Teléfono: 300 123 4567
         </p>
 
         <p>
-            📧 Correo: farmaciasaludvital@gmail.com
+            Correo: farmaciasaludvital@gmail.com
         </p>
 
         <p>
-            🕐 Horario: Lunes a sábado, 8:00 AM - 8:00 PM
+            Horario: Lunes a sábado, 8:00 AM - 8:00 PM
         </p>
 
     </section>
