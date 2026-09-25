@@ -330,6 +330,7 @@
             <a href="#contenido">Contenido</a>
             <a href="#empresarial">Tipo empresarial</a>
             <a href="#contacto">Contacto</a>
+            <a href="mesadeayuda.html">Mesa de Ayuda</a>
         </nav>
     </header>
 
@@ -345,6 +346,10 @@
 
             <a href="#servicios" class="boton">
                 Ver servicios
+            </a>
+
+            <a href="mesadeayuda.html" class="boton">
+            Mesa de Ayuda
             </a>
         </div>
     </section>
